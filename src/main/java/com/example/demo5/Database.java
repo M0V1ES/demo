@@ -95,6 +95,7 @@ public class Database {
         while (rs.next()) {
             list.add(new Person(rs.getString("login"),rs.getString("password"), rs.getInt("failed_counts")));
         }
+        System.out.println(list);
         return list;
     }
 
@@ -127,4 +128,5 @@ public class Database {
         statement.setString(1, login);
         statement.executeUpdate();
     }
+
 }

@@ -23,20 +23,17 @@ public class ChangePassword {
 
 
     public void ShowAlert(boolean login) {
+        Alert alert;
         if (login){
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setContentText("Успешный вход");
-            alert.setHeaderText("Вход");
-            alert.showAndWait();
-            System.out.println("asdasd");
         }
         else {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert = new Alert(Alert.AlertType.ERROR);
             alert.setContentText("Произошла ошибка.");
-            alert.setHeaderText("Вход");
-            alert.showAndWait();
-            System.out.println("asdasd");
         }
+        alert.setHeaderText("Вход");
+        alert.showAndWait();
     }
     @FXML
     protected void onButtonClick(){
